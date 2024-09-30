@@ -29,7 +29,7 @@ spec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while reducing network traffic.
 
-      _Uses `buildah` to create a container image. It also optionally creates a source image and runs some build-time tests. EC will flag a violation for [`trusted_task.trusted`](https://enterprisecontract.dev/docs/ec-policies/release_policy.html#trusted_task__trusted) if any tasks are added to the pipeline.
+      _Uses `buildah` to create a container image. It also optionally creates a  image and runs some build-time tests. EC will flag a violation for [`trusted_task.trusted`](https://enterprisecontract.dev/docs/ec-policies/release_policy.html#trusted_task__trusted) if any tasks are added to the pipeline.
       This pipeline is pushed as a Tekton bundle to [quay.io](https://quay.io/repository/konflux-ci/tekton-catalog/pipeline-docker-build?tab=tags)_
     finally:
     - name: show-sbom
@@ -68,11 +68,11 @@ spec:
       - name: workspace
         workspace: workspace
     params:
-    - description: Source Repository URL
+    - description:  Repository URL
       name: git-url
       type: string
     - default: ""
-      description: Revision of the Source Repository
+      description: Revision of the  Repository
       name: revision
       type: string
     - description: Fully Qualified Output Image
@@ -108,7 +108,7 @@ spec:
       description: Image tag expiration time, time values could be something like
         1h, 2d, 3w for hours, days, and weeks, respectively.
       name: image-expires-after
-    - default: "false"
+    - default: "true"
       description: Build a source image.
       name: build-source-image
       type: string
