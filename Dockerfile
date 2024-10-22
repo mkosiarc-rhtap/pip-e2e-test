@@ -9,3 +9,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 CMD ["python", "/opt/test_package_cachi2/src/test_package_cachi2/main.py"]
+
