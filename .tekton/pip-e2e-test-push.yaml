@@ -289,7 +289,7 @@ spec:
         - name: name
           value: source-build
         - name: bundle
-          value: quay.io/redhat-user-workloads/rhtap-build-tenant/build-tasks-dockerfiles/source-container-build:on-pr-3a919863f8df22ae1e650c7c287d960434ec5139
+          value: quay.io/mkosiarc_rhtap/task-source-build@sha256:27e9fb03c18c15e6ead2775dd1fe6cc812d48a19c2c5ea96d6bf44cc3e706916
         - name: kind
           value: task
         resolver: bundles
